@@ -237,6 +237,7 @@ $uc-h3: $size-5 !default;
 
     img {
         margin-bottom: 1em;
+        height: auto !important;
         
         @include until($tablet) {
             &.img-left,
