@@ -1,0 +1,38 @@
+.fw-light {
+  font-weight: $weight-light !important;
+}
+.fw-normal {
+  font-weight: $weight-normal !important;
+}
+.fw-semibold {
+  font-weight: $weight-semibold !important;
+}
+.fw-medium {
+  font-weight: $weight-medium !important;
+}
+.fw-bold {
+  font-weight: $weight-bold !important;
+}
+
+.highlight {
+  color: $highlight !important;
+}
+
+.is-uppercase {
+  text-transform: uppercase !important;
+}
+
+.is-underlined {
+  text-decoration: underline !important;
+}
+
+.fz-0 {
+  font-size: 0;
+}
+@each $size in $sizes {
+  $i: index($sizes, $size);
+
+  .fz-#{$i} {
+    font-size: $size !important;
+  }
+}

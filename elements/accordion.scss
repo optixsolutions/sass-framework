@@ -1,0 +1,88 @@
+.accordion-holder {
+    .accordion {
+        position: relative;
+        animation: accordion 0.5s ease both;
+    }
+
+    .accordion-check {
+        top: 0;
+        right: 0;
+        opacity: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        position: absolute;
+        @include unselectable;
+    }
+    
+    .accordion-icon {
+        top: 20px;
+        right: 10px;
+        position: absolute;
+    }
+    
+    .accordion-content {
+        opacity: 1;
+        z-index: 2;
+        overflow: hidden;
+        max-height: 5000px;
+        position: relative;
+        transform: translate(0, 0);
+        @include transition;
+    }
+
+    .accordion-check:checked {
+        ~ .accordion-content {
+            opacity: 0;
+            max-height: 0;
+            transform: translate(0, 50%);
+        }
+        ~ .arrow {
+            &:before {
+                transform: translate(-5px, -6px) rotate(-45deg);
+            }
+            &:after {
+                transform: translate(1px, -6px) rotate(45deg);
+            }
+
+            &.is-arrow-small {
+                &:before {
+                    transform: translate(-4px, -6px) rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    &.is-navigation {
+        .accordion-check {
+            top: 5px;
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+@keyframes accordion {
+    0% {
+        opacity: 0;
+        transform: rotateX(-90deg);
+        transform-origin: top center;
+    }
+    5% {
+        opacity: 1;
+    }
+    80% {
+        transform: rotateX(8deg);
+    }
+    83% {
+        transform: rotateX(6deg);
+    }
+    92% {
+        transform: rotateX(-3deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+        transform-origin: top center;
+    }
+}

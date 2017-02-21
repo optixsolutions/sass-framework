@@ -1,0 +1,43 @@
+.media {
+    display: flex;
+    align-items: flex-start;
+    
+    .media-img {
+        margin: 0 1em 0 0;
+    }
+    .media-body {
+        flex: 1;
+    }
+    
+    &.is-center {
+        align-items: center;
+    }
+
+    &.is-stacked {
+        display: block;
+        .media-img {
+            margin: 0 0 1em 0;
+        }
+    }
+
+    &.is-reversed .media-img {
+        order: 1;
+        margin-left: 0;
+        margin: 0 0 0 1em;
+    }
+
+    @include tablet {
+        @include media-states(tablet);
+    }
+    @include desktop {
+        @include media-states(desktop);
+    }
+    @include widescreen {
+        @include media-states(widescreen);
+    }
+}
+.control {
+    .media:not(:last-child) {
+        margin-bottom: 2em;
+    }
+}

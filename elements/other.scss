@@ -1,0 +1,122 @@
+.block {
+  @include block;
+}
+
+.delete {
+  @include delete;
+}
+
+.fa {
+  font-size: 21px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.heading {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.loader {
+  @include loader;
+}
+
+.number {
+  align-items: center;
+  background-color: $background;
+  border-radius: 290486px;
+  display: inline-flex;
+  font-size: $size-medium;
+  height: 2em;
+  justify-content: center;
+  margin-right: 1.5rem;
+  min-width: 2.5em;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  vertical-align: top;
+}
+
+
+
+.wrap {
+    @include wrap($widescreen - 40px);
+
+    // Modifiers
+    &.wrap-fluid {
+        margin: 0 20px;
+        max-width: none;
+    }
+    
+    .wrap,
+    .wrap-s,
+    .wrap-m,
+    .wrap-l {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.wrap-s {
+    @include wrap($wrap-s);
+}
+.wrap-m {
+    @include wrap($wrap-m);
+}
+.wrap-l {
+    @include wrap($wrap-l);
+}
+
+.wrap-half-desktop {
+  width: 100%;
+  @include desktop {
+    max-width: ($widescreen - 40px) / 2;
+  }
+}
+
+@include tablet {
+    .wrap-tablet {
+        @include wrap($widescreen - 40px);
+    }
+    .wrap-half-tablet {
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+      max-width: ($widescreen - 40px) / 2;
+    }
+}
+@include until($tablet) {
+    .wrap-until-tablet {
+        @include wrap($widescreen - 40px);
+    }
+}
+@include tablet-only {
+  .wrap-tablet-only {
+        @include wrap($widescreen - 40px);
+    }
+}
+
+@include desktop {
+    .wrap-desktop {
+        @include wrap($widescreen - 40px);
+    }
+}
+@include until($desktop) {
+    .wrap-until-desktop {
+        @include wrap($widescreen - 40px);
+    }
+}
+
+@include widescreen {
+    .wrap-widescreen {
+        @include wrap($widescreen - 40px);
+    }
+}
+@include until($widescreen) {
+    .wrap-until-widescreen {
+        @include wrap($widescreen - 40px);
+    }
+}

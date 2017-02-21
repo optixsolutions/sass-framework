@@ -1,0 +1,122 @@
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+// 1. Initial variables
+
+$imagePath: '../images/' !default;
+
+// Colors
+$black: #000000 !default;
+$white: #ffffff !default;
+
+// Typography
+$family-sans-serif: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$family-monospace: "Inconsolata", "Consolas", "Monaco", monospace !default;
+
+$size-1: 50px !default;
+$size-2: 40px !default;
+$size-3: 30px !default;
+$size-4: 20px !default;
+$size-5: 16px !default;
+$size-6: 14px !default;
+$size-7: 13px !default;
+$size-8: 11px !default;
+
+$sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 $size-8 !default;
+
+$body-size: $size-7 !default;
+
+$weight-thin: 100 !default;
+$weight-light: 300 !default;
+$weight-normal: 400 !default;
+$weight-medium: 500 !default;
+$weight-semibold: 600 !default;
+$weight-bold: 700 !default;
+
+// Miscellaneous
+$speed: 250ms !default;
+
+$easing: ease-in-out !default;
+$easing-cubic: cubic-bezier(.24,.22,.015,1.56) !default;
+
+$radius-small: 2px !default;
+$radius: 3px !default;
+$radius-large: 5px !default;
+
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+// 2. Primary colors
+$grey: #ccc !default;
+$grey-dark: #222 !default;
+$grey-light: #EEE !default;
+
+$primary: red !default;
+$secondary: blue !default;
+
+$highlight: $primary !default;
+
+$info: #d9edf7 !default;
+$success: #d6e9c6 !default;
+$warning: #fcf8e3 !default;
+$danger: #ebccd1 !default;
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+// 3. Applied variables
+$primary-invert: darken($primary, 50%) !default;
+$info-invert: #31708f !default;
+$success-invert: #3c763d !default;
+$warning-invert: #8a6d3b !default;
+$danger-invert: #a94442 !default;
+
+// General colors
+$background: #f5f5f5 !default;
+
+$border: #ddd !default;
+$border-hover: darken($border, 2.5%) !default;
+
+// Text colors
+$text: #333 !default;
+$text-light: #999 !default;
+$text-strong: 'inherit' !default;
+
+// Code colors
+$code: $danger !default;
+$code-background: $background !default;
+
+$pre: $text !default;
+$pre-background: $background !default;
+
+// Link colors
+$link: $primary !default;
+$link-hover: darken($link, 2.5%) !default;
+
+// Typography
+$family-primary: $family-sans-serif !default;
+$family-code: $family-monospace !default;
+
+$size-small: $size-7 !default;
+$size-normal: 1rem !default;
+$size-medium: $size-5 !default;
+$size-large: $size-4 !default;
+
+// Wrap Sizes
+$wrap-s: 440px !default;
+$wrap-m: 750px !default;
+$wrap-l: 880px !default;
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+// 4. Lists and maps
+$colors: (white: ($white, $black), black: ($black, $white), primary: ($primary, $primary-invert), info: ($info, $info-invert), success: ($success, $success-invert), warning: ($warning, $warning-invert), danger: ($danger, $danger-invert)) !default;
+
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+$table-row-even-background: $background !default;
+$table-row-hover-background: darken($background, 1.5%) !default;
+$table-row-even-hover-background: $table-row-hover-background !default;
