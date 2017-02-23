@@ -5,6 +5,7 @@
   border-radius: $radius;
   padding: 1.25rem 2.5rem 1.25rem 1.5rem;
   position: relative;
+  border: solid 1px darken($background, 5%);
 
   code,
   pre {
@@ -35,6 +36,7 @@
     &.is-#{$name} {
       background-color: $color;
       color: $color-invert;
+      border-color: darken($color, 5%);
 
       a:not(.btn) {
         color: $color-invert;
