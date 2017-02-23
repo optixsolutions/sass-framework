@@ -19,6 +19,8 @@ $input-icon-active: lighten($text-light, 2.5%) !default;
 
 $input-radius: $radius !default;
 
+$form-control-margin: 0.75rem !default;
+
 @mixin input {
   @include control;
 
@@ -253,7 +255,7 @@ $input-radius: $radius !default;
   text-align: left;
 
   &:not(:last-child) {
-    margin-bottom: 0.75rem;
+    margin-bottom: $form-control-margin;
   }
 
   // Modifiers

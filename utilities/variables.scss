@@ -113,9 +113,10 @@ $wrap-l: 880px !default;
 // 4. Lists and maps
 $colors: (white: ($white, $black), black: ($black, $white), primary: ($primary, $primary-invert), info: ($info, $info-invert), success: ($success, $success-invert), warning: ($warning, $warning-invert), danger: ($danger, $danger-invert)) !default;
 
+////////////////////////////////////////////////
+////////////////////////////////////////////////
 
-////////////////////////////////////////////////
-////////////////////////////////////////////////
+// 5. Misc
 
 $table-row-even-background: $background !default;
 $table-row-hover-background: darken($background, 1.5%) !default;
