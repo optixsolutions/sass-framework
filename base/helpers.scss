@@ -113,7 +113,7 @@ $displays: "block" "flex" "inline" "inline-block" "inline-flex";
 }
 
 // Margins and Padding
-$spacingSizes: ('0': 0, '1': 5px, '2': 10px, '3': 20px, '4': 40px, '5': 60px);
+$spacingSizes: ('0': 0, '1': 5px, '2': 10px, '3': 20px, '4': 40px, '5': 60px) !default;
 @include margin-padding($spacingSizes);
 
 // Text
