@@ -1,3 +1,5 @@
+$note: $grey-light !default;
+
 .fw-light {
   font-weight: $weight-light !important;
 }
@@ -27,7 +29,7 @@
 }
 
 .is-note {
-  color: $grey-light !important;
+  color: $note !important;
 }
 
 .fz-0 {
