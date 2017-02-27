@@ -239,8 +239,8 @@ $uc-p-line-height: inherit !default;
     }
 
     img {
-        margin-bottom: 1em;
         height: auto !important;
+        margin-bottom: $uc-margin;
         
         @include until($tablet) {
             &.img-left,
@@ -266,7 +266,7 @@ $uc-p-line-height: inherit !default;
     .img-video {
         display: block;
         position: relative;
-        margin-bottom: 1em;
+        margin-bottom: $uc-margin;
 
         @include until($tablet) {
             margin-left: auto;
