@@ -117,7 +117,6 @@ $uc-p-line-height: inherit !default;
     }
 
     ul {
-        margin-right: 2em;
         list-style: none outside;
 
         &:not(:first-child) {
@@ -159,7 +158,6 @@ $uc-p-line-height: inherit !default;
     }
 
     ol {
-        margin-right: 2em;
         counter-reset: item;
         list-style: none outside;
 
