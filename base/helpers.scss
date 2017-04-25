@@ -1,48 +1,48 @@
 // Display
-$displays: "block" "flex" "inline" "inline-block" "inline-flex";
+$displays: ('hidden': none, 'block': block, 'flex': flex, 'inline': inline, 'inline-block': inline-flex);
 
-@each $display in $displays {
-  .is-#{$display} {
+@each $class, $display in $displays {
+  .is-#{$class} {
     display: #{$display};
   }
 
-  .is-#{$display}-mobile {
+  .is-#{$class}-mobile {
     @include mobile {
       display: #{$display} !important;
     }
   }
 
-  .is-#{$display}-tablet {
+  .is-#{$class}-tablet {
     @include tablet {
       display: #{$display} !important;
     }
   }
 
-  .is-#{$display}-tablet-only {
+  .is-#{$class}-tablet-only {
     @include tablet-only {
       display: #{$display} !important;
     }
   }
 
-  .is-#{$display}-touch {
+  .is-#{$class}-touch {
     @include touch {
       display: #{$display} !important;
     }
   }
 
-  .is-#{$display}-desktop {
+  .is-#{$class}-desktop {
     @include desktop {
       display: #{$display} !important;
     }
   }
 
-  .is-#{$display}-desktop-only {
+  .is-#{$class}-desktop-only {
     @include desktop-only {
       display: #{$display} !important;
     }
   }
 
-  .is-#{$display}-widescreen {
+  .is-#{$class}-widescreen {
     @include widescreen {
       display: #{$display} !important;
     }
@@ -158,54 +158,6 @@ $alignments: left right center;
     .align-#{$alignment}-widescreen {
       text-align: $alignment;
     }
-  }
-}
-
-// Visibility
-
-.is-hidden {
-  display: none !important;
-}
-
-.is-hidden-mobile {
-  @include mobile {
-    display: none !important;
-  }
-}
-
-.is-hidden-tablet {
-  @include tablet {
-    display: none !important;
-  }
-}
-
-.is-hidden-tablet-only {
-  @include tablet-only {
-    display: none !important;
-  }
-}
-
-.is-hidden-touch {
-  @include touch {
-    display: none !important;
-  }
-}
-
-.is-hidden-desktop {
-  @include desktop {
-    display: none !important;
-  }
-}
-
-.is-hidden-desktop-only {
-  @include desktop-only {
-    display: none !important;
-  }
-}
-
-.is-hidden-widescreen {
-  @include widescreen {
-    display: none !important;
   }
 }
 
