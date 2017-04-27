@@ -1,7 +1,7 @@
 $contentClass: uc !default;
 
 $uc-bullet: $primary !default;
-$uc-bullet-top: 0.825rem !default;
+$uc-bullet-top: 0.65rem !default;
 $uc-link: $primary !default;
 $uc-h1: $size-3 !default;
 $uc-h2: $size-4 !default;
@@ -16,7 +16,7 @@ $uc-p-line-height: inherit !default;
 
     // Inline
     li + li {
-        margin-top: 0.25em;
+        margin-top: 0.525em;
     }
 
     a:not(.btn) {
@@ -125,9 +125,8 @@ $uc-p-line-height: inherit !default;
 
         > li {
             padding-left: 3em;
-            padding-top: .25em;
-            padding-bottom: .25em;
             position: relative;
+            line-height: $uc-p-line-height;
             
             &:before {
                 top: $uc-bullet-top;
@@ -167,9 +166,8 @@ $uc-p-line-height: inherit !default;
 
         > li {
             padding-left: 3em;
-            padding-top: .25em;
-            padding-bottom: .25em;
             position: relative;
+            line-height: $uc-p-line-height;
 
             &:before {
                 top: .25em;
