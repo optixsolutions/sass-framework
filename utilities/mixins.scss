@@ -293,8 +293,8 @@
   max-width: $size;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding-left: $wrap-pad;
+  padding-right: $wrap-pad;
 }
 
 // Responsiveness
