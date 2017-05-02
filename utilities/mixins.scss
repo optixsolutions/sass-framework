@@ -34,8 +34,8 @@
   top: 50%;
 }
 
-@mixin transition($speed: $speed, $easing: $easing) {
-  transition: all $speed $easing;
+@mixin transition($speed: $speed, $easing: $easing, $delay: 0ms) {
+  transition: all $speed $easing $delay;
 }
 
 @mixin delete {
