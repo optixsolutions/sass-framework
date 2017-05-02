@@ -1,7 +1,7 @@
 $contentClass: uc !default;
 
 $uc-bullet: $primary !default;
-$uc-bullet-top: 0.65rem !default;
+$uc-bullet-top: 0.825rem !default;
 $uc-link: $primary !default;
 $uc-h1: $size-3 !default;
 $uc-h2: $size-4 !default;
@@ -16,7 +16,7 @@ $uc-p-line-height: inherit !default;
 
     // Inline
     li + li {
-        margin-top: 0.525em;
+        margin-top: 0.25em;
     }
 
     a:not(.btn) {
@@ -125,8 +125,9 @@ $uc-p-line-height: inherit !default;
 
         > li {
             padding-left: 3em;
+            padding-top: .25em;
+            padding-bottom: .25em;
             position: relative;
-            line-height: $uc-p-line-height;
             
             &:before {
                 top: $uc-bullet-top;
@@ -166,8 +167,9 @@ $uc-p-line-height: inherit !default;
 
         > li {
             padding-left: 3em;
+            padding-top: .25em;
+            padding-bottom: .25em;
             position: relative;
-            line-height: $uc-p-line-height;
 
             &:before {
                 top: .25em;
@@ -243,6 +245,13 @@ $uc-p-line-height: inherit !default;
     img {
         height: auto !important;
         margin-bottom: $uc-margin;
+
+        &.img-center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            float: none !important;
+        }
         
         @include until($tablet) {
             &.img-left,
@@ -257,15 +266,18 @@ $uc-p-line-height: inherit !default;
             &.img-left {
                 float: left;
                 margin-right: 1em;
+                margin-bottom: $uc-margin !important;
             }
             &.img-right {
                 float: right;
                 margin-left: 1em;
+                margin-bottom: $uc-margin !important;
             }
         }
     }
 
     .img-video {
+        clear: both;
         display: block;
         position: relative;
         margin-bottom: $uc-margin;
