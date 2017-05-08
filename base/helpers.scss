@@ -3,7 +3,7 @@ $displays: ('hidden': none, 'block': block, 'flex': flex, 'inline': inline, 'inl
 
 @each $class, $display in $displays {
   .is-#{$class} {
-    display: #{$display};
+    display: #{$display} !important;
   }
 
   .is-#{$class}-mobile {
