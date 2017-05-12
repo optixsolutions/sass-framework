@@ -542,6 +542,10 @@
     &:not(.is-desktop) {
       display: flex;
     }
+
+    &.is-reversed-tablet {
+      flex-direction: row-reverse;
+    }
   }
 
   @include desktop {
