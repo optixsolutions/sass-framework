@@ -173,7 +173,7 @@ $form-control-margin: 0.75rem !default;
       border-color: $input-hover-border;
     }
 
-    &::ms-expand {
+    &::-ms-expand {
       display: none;
     }
   }
