@@ -53,6 +53,10 @@ $form-control-margin: 0.75rem !default;
   }
 }
 
+button {
+  cursor: pointer;
+}
+
 .input,
 .textarea {
   @include input;

@@ -2,7 +2,7 @@
     @include wrap($widescreen - (remToPx($wrap-pad) * 2));
 
     // Modifiers
-    &.wrap-fluid {
+    &.is-fluid {
         max-width: none;
         margin-left: $wrap-pad;
         margin-right: $wrap-pad;
