@@ -37,10 +37,6 @@ $uc-p-line-height: inherit !default;
         &:not(:last-child) {
             margin-bottom: $uc-margin;
         }
-
-        img {
-            margin-bottom: 0;
-        }
     }
 
     p {
@@ -243,6 +239,7 @@ $uc-p-line-height: inherit !default;
     }
 
     img {
+        float: none !important;
         height: auto !important;
         margin-bottom: $uc-margin;
 
@@ -266,12 +263,10 @@ $uc-p-line-height: inherit !default;
             &.img-left {
                 float: left;
                 margin-right: 1em;
-                margin-bottom: $uc-margin !important;
             }
             &.img-right {
                 float: right;
                 margin-left: 1em;
-                margin-bottom: $uc-margin !important;
             }
         }
     }
