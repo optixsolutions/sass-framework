@@ -1,0 +1,7 @@
+{
+  "name": "optix-sass",
+  "version": "1.0.0",
+  "main": "_all.scss",
+  "author": "Rich Moore",
+  "license": "MIT"
+}
