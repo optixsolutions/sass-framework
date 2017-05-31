@@ -82,7 +82,7 @@
     }
 
     .columns.is-mobile > &.is-offset-#{$i} {
-      margin-left: $i / 12 * 100%;
+      margin-left: $i / 12 * 100% !important;
     }
   }
 
@@ -148,7 +148,7 @@
       }
 
       &.is-offset-#{$i}-mobile {
-        margin-left: $i / 12 * 100%;
+        margin-left: $i / 12 * 100% !important;
       }
     }
   }
@@ -230,7 +230,7 @@
 
       &.is-offset-#{$i},
       &.is-offset-#{$i}-tablet {
-        margin-left: $i / 12 * 100%;
+        margin-left: $i / 12 * 100% !important;
       }
     }
   }
@@ -298,7 +298,7 @@
       }
 
       &.is-offset-#{$i}-desktop {
-        margin-left: $i / 12 * 100%;
+        margin-left: $i / 12 * 100% !important;
       }
     }
   }
@@ -366,7 +366,7 @@
       }
 
       &.is-offset-#{$i}-widescreen {
-        margin-left: $i / 12 * 100%;
+        margin-left: $i / 12 * 100% !important;
       }
     }
   }
