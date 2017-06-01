@@ -241,13 +241,18 @@ $uc-p-line-height: inherit !default;
     img {
         float: none !important;
         height: auto !important;
-        margin-bottom: $uc-margin;
+        // margin-bottom: $uc-margin;
 
         &.img-center {
             display: block;
             margin-left: auto;
             margin-right: auto;
             float: none !important;
+        }
+
+        &.img-left,
+        &.img-right {
+            margin-bottom: $uc-margin;
         }
         
         @include until($tablet) {
@@ -261,12 +266,12 @@ $uc-p-line-height: inherit !default;
 
         @include tablet {
             &.img-left {
-                float: left;
                 margin-right: 1em;
+                float: left !important;
             }
             &.img-right {
-                float: right;
                 margin-left: 1em;
+                float: right !important;
             }
         }
     }
