@@ -31,6 +31,14 @@
   width: 100%;
   @include desktop {
     max-width: ($widescreen - (remToPx($wrap-pad) * 2)) / 2;
+
+    &.is-left {
+      margin-left: auto;
+      padding-left: $wrap-pad;
+    }
+    &:not(.is-left) {
+      padding-right: $wrap-pad;
+    }
   }
 }
 
@@ -39,11 +47,15 @@
         @include wrap($widescreen - (remToPx($wrap-pad) * 2));
     }
     .wrap-half-tablet {
-      margin-left: 0;
-      margin-right: 0;
-      padding-left: 0;
-      padding-right: 0;
       max-width: ($widescreen - (remToPx($wrap-pad) * 2)) / 2;
+
+      &.is-left {
+        margin-left: auto;
+        padding-left: $wrap-pad;
+      }
+      &:not(.is-left) {
+        padding-right: $wrap-pad;
+      }
     }
 }
 @include until($tablet) {
