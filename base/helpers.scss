@@ -1,5 +1,5 @@
 // Display
-$displays: ('hidden': none, 'block': block, 'flex': flex, 'inline': inline, 'inline-block': inline-flex);
+$displays: ('hidden': none, 'block': block, 'flex': flex, 'inline': inline, 'inline-block': inline-block, 'inline-flex': inline-flex);
 
 @each $class, $display in $displays {
   .is-#{$class} {
