@@ -1,5 +1,9 @@
+$width: 3px;
+$height: 10px;
+
 .arrow {
-  // font-size: 0px;
+  width: 16px;
+  height: 16px;
   position: relative;
   display: inline-block;
 
@@ -7,46 +11,58 @@
   &:after {
     top: 50%;
     left: 50%;
-    width: 3px;
-    height: 10px;
     content: "";
+    width: $width;
+    height: $height;
     position: absolute;
     background-color: #fff;
     backface-visibility: hidden;
     @include transition;
   }
 
-  &:before {
-    transform: translate(1px, -6px) rotate(-45deg);
-  }
   &:after {
-    transform: translate(-5px, -6px) rotate(45deg);
+    transform: translate(1px, -#{$height / 2}) rotate(-45deg);
+  }
+  &:before {
+    margin-left: -#{$width};
+    transform: translate(-1px, -#{$height / 2}) rotate(45deg);
   }
   
   &.is-small {
+    $width: 2px;
+    $height: 8px;
+
     &:before,
     &:after {
-      width: 2px;
-      height: 8px;
+      width: $width;
+      height: $height;
     }
     
     &:after {
-      transform: translate(-4px, -6px) rotate(45deg);
+      transform: translate(1.2px, -#{$height / 2}) rotate(-45deg);
+    }
+    &:before {
+      margin-left: -#{$width};
+      transform: translate(-1.2px, -#{$height / 2}) rotate(45deg);
     }
   }
 
   &.is-large {
+    $width: 4px;
+    $height: 14px;
+
     &:before,
     &:after {
-      width: 4px;
-      height: 14px;
+      width: $width;
+      height: $height;
     }
 
-    &:before {
-      transform: translate(2px, -6px) rotate(-45deg);
-    }
     &:after {
-      transform: translate(-6px, -6px) rotate(45deg);
+      transform: translate(1.6px, -#{$height / 2}) rotate(-45deg);
+    }
+    &:before {
+      margin-left: -#{$width};
+      transform: translate(-1.6px, -#{$height / 2}) rotate(45deg);
     }
   }
 }
