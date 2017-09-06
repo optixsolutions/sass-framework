@@ -1,0 +1,85 @@
+.container {
+    width: 100%;
+
+    &.is-padded {
+        padding-left: $gap;
+        padding-right: $gap;
+    }
+
+    @include mobile {
+        &.is-padded-mobile {
+            padding-left: $gap;
+            padding-right: $gap;
+        }
+    }
+
+    @include tablet {
+        &.is-padded-tablet {
+            padding-left: $gap;
+            padding-right: $gap;
+        }
+
+        &.is-half-tablet {
+            max-width: ($widescreen / 2) - $gap;
+            
+            &:not(.is-left) {
+                margin-left: 0;
+            }
+            &.is-left {
+                margin-right: 0;
+            }
+        }
+    }
+
+    @include touch {
+        &.is-padded-touch {
+            padding-left: $gap;
+            padding-right: $gap;
+        }
+    }
+
+    @include until($desktop) {
+        &.is-padded-until-desktop {
+            padding-left: $gap;
+            padding-right: $gap;
+        }
+    }
+
+    @include desktop {
+        &.is-padded-desktop {
+            padding-left: $gap;
+            padding-right: $gap;
+        }
+    }
+
+    @include until($widescreen) {
+        &.is-padded-until-widescreen {
+            padding-left: $gap;
+            padding-right: $gap;
+        }
+    }
+
+    @include widescreen {
+        &.is-padded-widescreen {
+            padding-left: $gap;
+            padding-right: $gap;
+        }
+    }
+
+    @include fullhd {
+        &.is-padded-fullhd {
+            padding-left: $gap;
+            padding-right: $gap;
+        }
+    }
+
+    &.is-small {
+        max-width: $container-small;
+    }
+    &.is-medium {
+        max-width: $container-medium;
+    }
+    &.is-large {
+        max-width: $container-large;
+    }
+}

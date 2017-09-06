@@ -1,7 +1,10 @@
 {
   "name": "optix-sass",
-  "version": "1.0.8",
+  "version": "2.0.0",
   "main": "_all.scss",
   "author": "Rich Moore",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "bulma": "^0.5.1"
+  }
 }

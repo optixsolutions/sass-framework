@@ -1,233 +1,24 @@
+.columns-holder {
+    padding: 0.75rem
+}
+
 .column {
-  display: block;
-  flex-basis: 0;
-  flex-grow: 1;
-  flex-shrink: 1;
-  padding: 0.75rem;
-  
-  &.is-pushed-right {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  @include tablet {
-    .columns.is-pad-medium-tablet > & {
-      padding: 1.75rem;
-    }
-  }
-  @include desktop {
-    .columns.is-pad-medium-desktop > & {
-      padding: 1.75rem;
-    }
-  }
-
-  .columns.is-mobile > &.is-narrow {
-    flex: none;
-  }
-
-  .columns.is-mobile > &.is-full {
-    flex: none;
-    width: 100%;
-  }
-
-  .columns.is-mobile > &.is-three-quarters {
-    flex: none;
-    width: 75%;
-  }
-
-  .columns.is-mobile > &.is-two-thirds {
-    flex: none;
-    width: 66.6666%;
-  }
-
-  .columns.is-mobile > &.is-half {
-    flex: none;
-    width: 50%;
-  }
-
-  .columns.is-mobile > &.is-one-third {
-    flex: none;
-    width: 33.3333%;
-  }
-
-  .columns.is-mobile > &.is-one-quarter {
-    flex: none;
-    width: 25%;
-  }
-
-  .columns.is-mobile > &.is-offset-three-quarters {
-    margin-left: 75%;
-  }
-
-  .columns.is-mobile > &.is-offset-two-thirds {
-    margin-left: 66.6666%;
-  }
-
-  .columns.is-mobile > &.is-offset-half {
-    margin-left: 50%;
-  }
-
-  .columns.is-mobile > &.is-offset-one-third {
-    margin-left: 33.3333%;
-  }
-
-  .columns.is-mobile > &.is-offset-one-quarter {
-    margin-left: 25%;
-  }
-
   @for $i from 1 through 12 {
-    .columns.is-mobile > &.is-#{$i} {
-      flex: none;
-      width: $i / 12 * 100%;
-    }
-
     .columns.is-mobile > &.is-offset-#{$i} {
       margin-left: $i / 12 * 100% !important;
     }
   }
 
   @include mobile {
-    &.is-narrow-mobile {
-      flex: none;
-    }
-
-    &.is-full-mobile {
-      flex: none;
-      width: 100%;
-    }
-
-    &.is-three-quarters-mobile {
-      flex: none;
-      width: 75%;
-    }
-
-    &.is-two-thirds-mobile {
-      flex: none;
-      width: 66.6666%;
-    }
-
-    &.is-half-mobile {
-      flex: none;
-      width: 50%;
-    }
-
-    &.is-one-third-mobile {
-      flex: none;
-      width: 33.3333%;
-    }
-
-    &.is-one-quarter-mobile {
-      flex: none;
-      width: 25%;
-    }
-
-    &.is-offset-three-quarters-mobile {
-      margin-left: 75%;
-    }
-
-    &.is-offset-two-thirds-mobile {
-      margin-left: 66.6666%;
-    }
-
-    &.is-offset-half-mobile {
-      margin-left: 50%;
-    }
-
-    &.is-offset-one-third-mobile {
-      margin-left: 33.3333%;
-    }
-
-    &.is-offset-one-quarter-mobile {
-      margin-left: 25%;
-    }
-
     @for $i from 1 through 12 {
-      &.is-#{$i}-mobile {
-        flex: none;
-        width: $i / 12 * 100%;
-      }
-
       &.is-offset-#{$i}-mobile {
         margin-left: $i / 12 * 100% !important;
       }
     }
   }
 
-
   @include tablet {
-    &.is-narrow,
-    &.is-narrow-tablet {
-      flex: none;
-    }
-
-    &.is-full,
-    &.is-full-tablet {
-      flex: none;
-      width: 100%;
-    }
-
-    &.is-three-quarters,
-    &.is-three-quarters-tablet {
-      flex: none;
-      width: 75%;
-    }
-
-    &.is-two-thirds,
-    &.is-two-thirds-tablet {
-      flex: none;
-      width: 66.6666%;
-    }
-
-    &.is-half,
-    &.is-half-tablet {
-      flex: none;
-      width: 50%;
-    }
-
-    &.is-one-third,
-    &.is-one-third-tablet {
-      flex: none;
-      width: 33.3333%;
-    }
-
-    &.is-one-quarter,
-    &.is-one-quarter-tablet {
-      flex: none;
-      width: 25%;
-    }
-
-    &.is-offset-three-quarters,
-    &.is-offset-three-quarters-tablet {
-      margin-left: 75%;
-    }
-
-    &.is-offset-two-thirds,
-    &.is-offset-two-thirds-tablet {
-      margin-left: 66.6666%;
-    }
-
-    &.is-offset-half,
-    &.is-offset-half-tablet {
-      margin-left: 50%;
-    }
-
-    &.is-offset-one-third,
-    &.is-offset-one-third-tablet {
-      margin-left: 33.3333%;
-    }
-
-    &.is-offset-one-quarter,
-    &.is-offset-one-quarter-tablet {
-      margin-left: 25%;
-    }
-
     @for $i from 1 through 12 {
-      &.is-#{$i},
-      &.is-#{$i}-tablet {
-        flex: none;
-        width: $i / 12 * 100%;
-      }
-
       &.is-offset-#{$i},
       &.is-offset-#{$i}-tablet {
         margin-left: $i / 12 * 100% !important;
@@ -235,349 +26,35 @@
     }
   }
 
+  @include touch {
+    @for $i from 1 through 12 {
+      &.is-offset-#{$i}-touch {
+        margin-left: $i / 12 * 100% !important;
+      }
+    }
+  }
 
   @include desktop {
-    &.is-narrow-desktop {
-      flex: none;
-    }
-
-    &.is-full-desktop {
-      flex: none;
-      width: 100%;
-    }
-
-    &.is-three-quarters-desktop {
-      flex: none;
-      width: 75%;
-    }
-
-    &.is-two-thirds-desktop {
-      flex: none;
-      width: 66.6666%;
-    }
-
-    &.is-half-desktop {
-      flex: none;
-      width: 50%;
-    }
-
-    &.is-one-third-desktop {
-      flex: none;
-      width: 33.3333%;
-    }
-
-    &.is-one-quarter-desktop {
-      flex: none;
-      width: 25%;
-    }
-
-    &.is-offset-three-quarters-desktop {
-      margin-left: 75%;
-    }
-
-    &.is-offset-two-thirds-desktop {
-      margin-left: 66.6666%;
-    }
-
-    &.is-offset-half-desktop {
-      margin-left: 50%;
-    }
-
-    &.is-offset-one-third-desktop {
-      margin-left: 33.3333%;
-    }
-
-    &.is-offset-one-quarter-desktop {
-      margin-left: 25%;
-    }
-
     @for $i from 1 through 12 {
-      &.is-#{$i}-desktop {
-        flex: none;
-        width: $i / 12 * 100%;
-      }
-
       &.is-offset-#{$i}-desktop {
         margin-left: $i / 12 * 100% !important;
       }
     }
   }
 
-
   @include widescreen {
-    &.is-narrow-widescreen {
-      flex: none;
-    }
-
-    &.is-full-widescreen {
-      flex: none;
-      width: 100%;
-    }
-
-    &.is-three-quarters-widescreen {
-      flex: none;
-      width: 75%;
-    }
-
-    &.is-two-thirds-widescreen {
-      flex: none;
-      width: 66.6666%;
-    }
-
-    &.is-half-widescreen {
-      flex: none;
-      width: 50%;
-    }
-
-    &.is-one-third-widescreen {
-      flex: none;
-      width: 33.3333%;
-    }
-
-    &.is-one-quarter-widescreen {
-      flex: none;
-      width: 25%;
-    }
-
-    &.is-offset-three-quarters-widescreen {
-      margin-left: 75%;
-    }
-
-    &.is-offset-two-thirds-widescreen {
-      margin-left: 66.6666%;
-    }
-
-    &.is-offset-half-widescreen {
-      margin-left: 50%;
-    }
-
-    &.is-offset-one-third-widescreen {
-      margin-left: 33.3333%;
-    }
-
-    &.is-offset-one-quarter-widescreen {
-      margin-left: 25%;
-    }
-
     @for $i from 1 through 12 {
-      &.is-#{$i}-widescreen {
-        flex: none;
-        width: $i / 12 * 100%;
-      }
-
       &.is-offset-#{$i}-widescreen {
         margin-left: $i / 12 * 100% !important;
       }
     }
   }
-}
 
-.columns {
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
-  margin-top: -0.75rem;
-
-  &:last-child {
-    margin-bottom: -0.75rem;
-  }
-
-  &:not(:last-child) {
-    margin-bottom: 0.75rem;
-  }
-
-  // Modifiers
-  @include tablet {
-    &.is-border-bottom-tablet {
-      & > .column {
-        position: relative;
-
-        &:after {
-          bottom: 0;
-          height: 1px;
-          content: '';
-          left: 0.75em;
-          right: 0.75em;
-          position: absolute;
-          background-color: $border;
-        }
+  @include fullhd {
+    @for $i from 1 through 12 {
+      &.is-offset-#{$i}-fullhd {
+        margin-left: $i / 12 * 100% !important;
       }
     }
-  }
-
-  &.is-centered {
-    justify-content: center;
-  }
-  &.is-middle {
-    .column {
-      &:not(.is-background) {
-        align-self: center;
-      }
-    }
-    .is-background {
-      display: flex;
-      
-      > div {
-        align-self: center;
-      }
-    }
-  }
-
-  &.is-gapless {
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    &:not(:last-child) {
-      margin-bottom: 1.5rem;
-    }
-
-    & > .column {
-      margin: 0;
-      padding: 0;
-    }
-  }
-
-  @include until($tablet) {
-    &.is-gapless-mobile-only {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      &:not(:last-child) {
-        margin-bottom: 1.5rem;
-      }
-
-      & > .column {
-        margin: 0;
-        padding: 0;
-      }
-    }
-  }
-
-  &.is-grid {
-    // Responsiveness
-    @include tablet {
-      flex-wrap: wrap;
-
-      & > .column {
-        max-width: 33.3333%;
-        padding: 0.75rem;
-        width: 33.3333%;
-
-        & + .column {
-          margin-left: 0;
-        }
-      }
-    }
-  }
-
-  &.is-mobile {
-    display: flex;
-  }
-
-  &.is-multiline {
-    flex-wrap: wrap;
-  }
-
-  &.is-vcentered {
-    align-items: center;
-  }
-
-  @include tablet {
-    &.is-pad-medium-tablet {
-      margin-left: -1.75rem;
-      margin-right: -1.75rem;
-      margin-top: -1.75rem;
-
-      &:last-child {
-        margin-bottom: -1.75rem;
-      }
-
-      &:not(:last-child) {
-        margin-bottom: 1.75rem;
-      }
-
-      &.is-border-bottom-tablet {
-        & > .column:after {
-          left: 1.75em;
-          right: 1.75em;
-        }
-      }
-    }
-  }
-
-  @include desktop {
-    &.is-pad-medium-desktop {
-      margin-left: -1.75rem;
-      margin-right: -1.75rem;
-      margin-top: -1.75rem;
-
-      &:last-child {
-        margin-bottom: -1.75rem;
-      }
-
-      &:not(:last-child) {
-        margin-bottom: 1.75rem;
-      }
-
-      &.is-border-bottom-desktop {
-        & > .column:after {
-          left: 1.75em;
-          right: 1.75em;
-        }
-      }
-    }
-  }
-
-  // Responsiveness
-  @include tablet {
-    &:not(.is-desktop) {
-      display: flex;
-    }
-
-    &.is-reversed-tablet {
-      flex-direction: row-reverse;
-    }
-  }
-
-  @include desktop {
-    // Modifiers
-    &.is-desktop {
-      display: flex;
-    }
-
-    &.is-reversed-desktop {
-      flex-direction: row-reverse;
-    }
-  }
-}
-
-.columns-wrap {
-  padding-top: .75rem;
-  padding-left: .75rem;
-  padding-right: .75rem;
-}
-
-@include tablet {
-  .columns-wrap-medium-tablet {
-    padding-top: 1.75rem;
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
-  }
-}
-
-@include desktop {
-  .columns-wrap-medium-desktop {
-    padding-top: 1.75rem;
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
   }
 }

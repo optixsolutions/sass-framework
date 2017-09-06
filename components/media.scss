@@ -5,12 +5,17 @@
     .media-img {
         margin: 0 1em 0 0;
     }
+
     .media-body {
         flex: 1;
     }
     
-    &.is-center {
+    &.is-vcentered {
         align-items: center;
+    }
+
+    &.is-fullwidth {
+        width: 100%;
     }
 
     &.is-stacked {
@@ -29,13 +34,20 @@
     @include tablet {
         @include media-states(tablet);
     }
+
     @include desktop {
         @include media-states(desktop);
     }
+
     @include widescreen {
         @include media-states(widescreen);
     }
+    
+    @include fullhd {
+        @include media-states(fullhd);
+    }
 }
+
 .control {
     .media:not(:last-child) {
         margin-bottom: 2em;

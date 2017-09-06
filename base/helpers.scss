@@ -1,171 +1,80 @@
-// Display
-$displays: ('hidden': none, 'block': block, 'flex': flex, 'inline': inline, 'inline-block': inline-block, 'inline-flex': inline-flex);
-
-@each $class, $display in $displays {
-  .is-#{$class} {
-    display: #{$display} !important;
-  }
-
-  .is-#{$class}-mobile {
-    @include mobile {
-      display: #{$display} !important;
-    }
-  }
-
-  .is-#{$class}-tablet {
-    @include tablet {
-      display: #{$display} !important;
-    }
-  }
-
-  .is-#{$class}-tablet-only {
-    @include tablet-only {
-      display: #{$display} !important;
-    }
-  }
-
-  .is-#{$class}-touch {
-    @include touch {
-      display: #{$display} !important;
-    }
-  }
-
-  .is-#{$class}-desktop {
-    @include desktop {
-      display: #{$display} !important;
-    }
-  }
-
-  .is-#{$class}-desktop-only {
-    @include desktop-only {
-      display: #{$display} !important;
-    }
-  }
-
-  .is-#{$class}-widescreen {
-    @include widescreen {
-      display: #{$display} !important;
-    }
-  }
+// Text
+.is-light {
+    font-weight: $weight-light !important;
+}
+.is-normal {
+    font-weight: $weight-normal !important;
+}
+.is-semibold {
+    font-weight: $weight-semibold !important;
+}
+.is-medium {
+    font-weight: $weight-medium !important;
+}
+.is-bold {
+    font-weight: $weight-bold !important;
 }
 
-// Float
-.is-clearfix {
-  @include clearfix;
+.is-underlined {
+    text-decoration: underline !important;
 }
 
-.is-pulled-left {
-  float: left;
-}
-
-.is-pulled-right {
-  float: right;
-}
-
-// Overflow
-.is-clipped {
-  overflow: hidden !important;
-}
-
-// Overlay
-.is-overlay {
-  @include overlay;
-}
-
-// Scrollable
-.scrollable {
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+.has-text-default {
+    color: $text !important;
 }
 
 // Rotated
 .is-rotated-90 {
-  transform: rotate(90deg)
+    transform: rotate(90deg)
 }
 .is-rotated-180 {
-  transform: rotate(180deg)
+    transform: rotate(180deg)
 }
 .is-rotated-270 {
-  transform: rotate(270deg)
+    transform: rotate(270deg)
 }
 
-// Rounding
 .is-round {
     border-radius: 50%;
-    background-color: $white;
-}
-.is-rounded {
-    border-radius: $radius;
-}
-.is-rounded-large {
-    border-radius: $radius-large;
 }
 
 // Inline block  alignment
 .is-middle {
-  vertical-align: middle !important;
+    vertical-align: middle !important;
+}
+.is-top {
+    vertical-align: top !important;
 }
 
-.inline-list {
-  display: flex;
-  flex-direction: row;
+.is-flex-end {
+    align-self: flex-end !important;
 }
 
 // Margins and Padding
 $spacingSizes: ('0': 0, '1': 5px, '2': 10px, '3': 20px, '4': 40px, '5': 60px) !default;
+
 @include margin-padding($spacingSizes);
 
-// Text
-$alignments: left right center;
-@each $alignment in $alignments {
-  .align-#{$alignment} {
-    text-align: $alignment;
-  }
-}
-
-.is-white-text {
-  color: $white !important;
-  * {
-    color: $white !important;
-  }
+@include mobile {
+    @include margin-padding($spacingSizes, '-mobile');
 }
 
 @include tablet {
-  @include margin-padding($spacingSizes, '-tablet');
+    @include margin-padding($spacingSizes, '-tablet');
+}
 
-  @each $alignment in $alignments {
-    .align-#{$alignment}-tablet {
-      text-align: $alignment;
-    }
-  }
+@include touch {
+    @include margin-padding($spacingSizes, '-touch');
 }
 
 @include desktop {
-  @include margin-padding($spacingSizes, '-desktop');
-
-  @each $alignment in $alignments {
-    .align-#{$alignment}-desktop {
-      text-align: $alignment;
-    }
-  }
+    @include margin-padding($spacingSizes, '-desktop');
 }
 
 @include widescreen {
-  @include margin-padding($spacingSizes, '-widescreen');
-
-  @each $alignment in $alignments {
-    .align-#{$alignment}-widescreen {
-      text-align: $alignment;
-    }
-  }
+    @include margin-padding($spacingSizes, '-widescreen');
 }
 
-// Other
-.is-disabled {
-  pointer-events: none;
-}
-
-.is-unselectable {
-  @include unselectable;
+@include fullhd {
+    @include margin-padding($spacingSizes, '-fullhd');
 }
