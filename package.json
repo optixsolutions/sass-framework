@@ -4,7 +4,7 @@
   "main": "_all.scss",
   "author": "Rich Moore",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "bulma": "^0.5.1"
   }
 }
