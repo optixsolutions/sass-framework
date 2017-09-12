@@ -127,6 +127,7 @@ $content-p-line-height: inherit !default;
     }
 
     ol {
+        margin-left: 0;
         counter-reset: item;
         list-style: none outside;
 
