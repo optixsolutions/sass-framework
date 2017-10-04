@@ -85,6 +85,7 @@ $content-p-line-height: inherit !default;
     }
 
     ul {
+        margin-top: 0;
         margin-left: 0;
         list-style: none outside;
 
@@ -127,12 +128,13 @@ $content-p-line-height: inherit !default;
     }
 
     ol {
+        margin-top: 0;
         margin-left: 0;
         counter-reset: item;
         list-style: none outside;
 
         &:not(:first-child) {
-            margin-top: 1em;
+            margin-top: $content-block-margin;
         }
 
         > li {
