@@ -58,3 +58,11 @@
     }
   }
 }
+
+.columns {
+  @include desktop {
+    &.is-reversed-desktop {
+      flex-direction: row-reverse;
+    }
+  }
+}

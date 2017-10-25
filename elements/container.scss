@@ -21,11 +21,12 @@
         }
 
         &.is-half-tablet {
-            max-width: ($widescreen / 2) - $gap;
+            max-width: ($fullhd / 2) - $gap;
             
             &:not(.is-left) {
                 margin-left: 0;
             }
+            
             &.is-left {
                 margin-right: 0;
             }
@@ -50,6 +51,18 @@
         &.is-padded-desktop {
             padding-left: $gap;
             padding-right: $gap;
+        }
+
+        &.is-half-desktop {
+            max-width: ($fullhd / 2) - $gap;
+            
+            &:not(.is-left) {
+                margin-left: 0;
+            }
+
+            &.is-left {
+                margin-right: 0;
+            }
         }
     }
 
@@ -77,9 +90,11 @@
     &.is-small {
         max-width: $container-small;
     }
+
     &.is-medium {
         max-width: $container-medium;
     }
+
     &.is-large {
         max-width: $container-large;
     }
