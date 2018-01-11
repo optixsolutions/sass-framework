@@ -80,6 +80,13 @@
         }
     }
 
+    @include until(fullhd) {
+        &.is-padded-until-fullhd {
+            padding-left: $gap;
+            padding-right: $gap;
+        }
+    }
+
     @include fullhd {
         &.is-padded-fullhd {
             padding-left: $gap;
