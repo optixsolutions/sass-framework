@@ -80,7 +80,7 @@
         }
     }
 
-    @include until(fullhd) {
+    @include until($fullhd) {
         &.is-padded-until-fullhd {
             padding-left: $gap;
             padding-right: $gap;
