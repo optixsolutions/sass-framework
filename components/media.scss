@@ -1,15 +1,19 @@
 .media {
-    display: flex;
-    align-items: flex-start;
-    
     .media-img {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
         margin: 0 1em 0 0;
     }
 
     .media-body {
-        flex: 1;
+        flex-grow: 1;
+        flex-shrink: 1;
+        overflow: auto;
+        flex-basis: auto;
+        text-align: left;
     }
-    
+
     &.is-vcentered {
         align-items: center;
     }
@@ -20,6 +24,7 @@
 
     &.is-stacked {
         display: block;
+
         .media-img {
             margin: 0 0 1em 0;
         }
@@ -42,7 +47,7 @@
     @include widescreen {
         @include media-states(widescreen);
     }
-    
+
     @include fullhd {
         @include media-states(fullhd);
     }
