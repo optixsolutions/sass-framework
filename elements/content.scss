@@ -9,7 +9,7 @@ $content-h3-size: $size-5 !default;
 
 $content-block-margin: 1em !default;
 $content-p-line-height: inherit !default;
-    
+
 .content {
     figure {
         margin: 0;
@@ -43,40 +43,65 @@ $content-p-line-height: inherit !default;
         }
     }
 
+    .title {
+        color: $title-color;
+        font-weight: $title-weight;
+    }
+
+    .subtitle {
+        color: $subtitle-color;
+        font-weight: $subtitle-weight;
+    }
+
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-        font-weight: $weight-semibold;
+        &:not(.title):not(.subtitle) {
+            font-weight: $weight-semibold;
 
-        a {
-            color: $text !important;
-            text-decoration: none !important;
+            a {
+                color: $text !important;
+                text-decoration: none !important;
 
-            &:hover {
-                color: $content-link-color !important;
+                &:hover {
+                    color: $content-link-color !important;
+                }
             }
+        }
+
+        &.title,
+        &.subtitle {
+            margin-top: inherit;
         }
     }
 
     h1 {
-        font-size: $content-h1-size;
+        &:not(.title):not(.subtitle) {
+            font-size: $content-h1-size;
+        }
     }
 
     h2 {
-        font-size: $content-h2-size;
+        &:not(.title):not(.subtitle) {
+            font-size: $content-h2-size;
+        }
     }
 
     h3 {
-        font-size: $content-h3-size;
+        &:not(.title):not(.subtitle) {
+            font-size: $content-h3-size;
+        }
     }
 
     h4,
     h5,
     h6 {
-        font-size: 1em;
+        &:not(.title):not(.subtitle) {
+            font-size: 1em;
+        }
     }
 
     blockquote {
@@ -99,7 +124,7 @@ $content-p-line-height: inherit !default;
             padding-top: .25em;
             padding-bottom: .25em;
             position: relative;
-            
+
             &:before {
                 top: $content-bullet-top;
                 width: 5px;
@@ -184,38 +209,38 @@ $content-p-line-height: inherit !default;
         }
     }
 
-     img {
-         float: none !important;
-         height: auto !important;
+    img {
+        float: none !important;
+        height: auto !important;
 
-         &.is-centered {
-             display: block;
-             margin-left: auto;
-             margin-right: auto;
-             float: none !important;
-         }
-        
-         @include until($tablet) {
-             &.is-left,
-             &.is-right {
-                 display: block;
-                 margin-left: auto;
-                 margin-right: auto;
-             }
-         }
+        &.is-centered {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            float: none !important;
+        }
 
-         @include tablet {
-             &.is-left {
-                 float: left !important;
-                 margin-right: $content-block-margin;
-                 margin-bottom: $content-block-margin;
-             }
+        @include until($tablet) {
+            &.is-left,
+            &.is-right {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
 
-             &.is-right {
-                 float: right !important;
-                 margin-left: $content-block-margin;
-                 margin-bottom: $content-block-margin;
-             }
-         }
-     }
+        @include tablet {
+            &.is-left {
+                float: left !important;
+                margin-right: $content-block-margin;
+                margin-bottom: $content-block-margin;
+            }
+
+            &.is-right {
+                float: right !important;
+                margin-left: $content-block-margin;
+                margin-bottom: $content-block-margin;
+            }
+        }
+    }
 }

@@ -7,9 +7,9 @@
     }
 
     .media-body {
+        min-width: 0;
         flex-grow: 1;
         flex-shrink: 1;
-        overflow: hidden; // was auto but caused scroll bars in safari
         flex-basis: auto;
         text-align: left;
     }
