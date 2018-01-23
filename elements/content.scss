@@ -45,11 +45,13 @@ $content-p-line-height: inherit !default;
 
     .title {
         color: $title-color;
+        font-size: $title-size;
         font-weight: $title-weight;
     }
 
     .subtitle {
         color: $subtitle-color;
+        font-size: $subtitle-size;
         font-weight: $subtitle-weight;
     }
 
