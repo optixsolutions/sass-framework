@@ -1,11 +1,11 @@
 {
   "name": "optix-sass",
-  "version": "2.1.9",
+  "version": "2.2.0",
   "main": "_all.scss",
   "author": "Rich Moore",
   "license": "MIT",
   "dependencies": {
-    "bulma": "^0.6.0",
-    "font-awesome": "^4.7.0"
+    "bulma": "^0.6.*",
+    "font-awesome": "^5.0.*"
   }
 }
