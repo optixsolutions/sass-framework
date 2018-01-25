@@ -6,6 +6,6 @@
   "license": "MIT",
   "dependencies": {
     "bulma": "^0.6",
-    "fontawesome": "^4.7.2"
+    "font-awesome": "^4.7.0"
   }
 }
