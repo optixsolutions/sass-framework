@@ -8,71 +8,61 @@
         .m-#{$class}#{$device} {
             margin: #{$size} !important;
         }
+        
         .mt-#{$class}#{$device} {
             margin-top: #{$size} !important;
         }
+
         .mb-#{$class}#{$device} {
             margin-bottom: #{$size} !important;
         }
+
         .my-#{$class}#{$device} {
             margin-top: #{$size} !important;
             margin-bottom: #{$size} !important;
         }
+
         .ml-#{$class}#{$device} {
             margin-left: #{$size} !important;
         }
+
         .mr-#{$class}#{$device} {
             margin-right: #{$size} !important;
         }
+
         .mx-#{$class}#{$device} {
             margin-left: #{$size} !important;
             margin-right: #{$size} !important;
         }
+
         .p-#{$class}#{$device} {
             padding: #{$size} !important;
         }
+
         .pt-#{$class}#{$device} {
             padding-top: #{$size} !important;
         }
+
         .pb-#{$class}#{$device} {
             padding-bottom: #{$size} !important;
         }
+
         .py-#{$class}#{$device} {
             padding-top: #{$size} !important;
             padding-bottom: #{$size} !important;
         }
+
         .pl-#{$class}#{$device} {
             padding-left: #{$size} !important;
         }
+
         .pr-#{$class}#{$device} {
             padding-right: #{$size} !important;
         }
+
         .px-#{$class}#{$device} {
             padding-left: #{$size} !important;
             padding-right: #{$size} !important;
         }
-    }
-}
-
-@mixin media-states($device) {
-    &.is-media-#{$device} {
-        display: flex;
-        
-        .media-img {
-            margin: 0 1em 0 0;
-        }
-    }
-
-    &.is-stacked-#{$device} {
-        display: block;
-        
-        .media-img {
-            margin: 0 0 1em 0;
-        }
-    }
-
-    &.is-reversed-#{$device} > .media-img {
-        order: 1;
-        margin: 0 0 0 1em;
     }
 }

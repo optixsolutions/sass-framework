@@ -11,21 +11,24 @@
 .is-rotated-90 {
     transform: rotate(90deg)
 }
+
 .is-rotated-180 {
     transform: rotate(180deg)
 }
+
 .is-rotated-270 {
     transform: rotate(270deg)
 }
 
-.is-round {
-    border-radius: 50%;
+.is-rounded {
+    border-radius: 9999px;
 }
 
 // Inline block  alignment
 .is-middle {
     vertical-align: middle !important;
 }
+
 .is-top {
     vertical-align: top !important;
 }
