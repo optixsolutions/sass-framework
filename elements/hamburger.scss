@@ -1,0 +1,63 @@
+$hamburger-color: $link !default;
+
+.hamburger {
+    padding: 5px;
+    cursor: pointer;
+    display: inline-flex;
+
+    .hamburger-wrap {
+        width: 26px;
+        height: 20px;
+        display: block;
+        position: relative;
+    }
+
+    &.is-slider {
+        .hamburger-wrap {
+            span,
+            span:after,
+            span:before {
+                @include transition(200ms, ease);
+
+                width: 26px;
+                height: 3px;
+                display: block;
+                position: absolute;
+                background-color: $hamburger-color;
+            }
+            
+            span {
+                top: 2.5px;
+
+                &:before {
+                    top: 6px;
+                    content: '';
+                }
+
+                &:after {
+                    top: 12px;
+                    content: '';
+                }
+            }
+        }
+    }
+
+    &.is-active {
+        &.is-slider {
+            .hamburger-wrap {
+                span {
+                    transform: translate3d(0, 6px, 0) rotate(45deg);
+
+                    &:before {
+                        transform: rotate(-45deg) translate3d(-5px, -4px, 0);
+                        opacity: 0;
+                    }
+
+                    &:after {
+                        transform: translate3d(0, -12px, 0) rotate(-90deg);
+                    }
+                }
+            }
+        }
+    }
+}
