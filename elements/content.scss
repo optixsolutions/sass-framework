@@ -11,6 +11,12 @@ $content-block-margin: 1em !default;
 $content-p-line-height: inherit !default;
 
 .content {
+    &:after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+
     figure {
         margin: 0;
         padding: 0;
@@ -216,16 +222,20 @@ $content-p-line-height: inherit !default;
         }
 
         @include tablet {
+            &.is-left,
+            &.is-right {
+                max-width: 50%;
+                margin-bottom: $content-block-margin;
+            }
+
             &.is-left {
                 float: left !important;
                 margin-right: $content-block-margin;
-                margin-bottom: $content-block-margin;
             }
 
             &.is-right {
                 float: right !important;
                 margin-left: $content-block-margin;
-                margin-bottom: $content-block-margin;
             }
         }
     }
