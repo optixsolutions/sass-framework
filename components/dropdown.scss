@@ -1,0 +1,11 @@
+$dropdown-text-size: $size-7 !default;
+
+.dropdown {
+    .dropdown-item {
+        font-size: $dropdown-text-size;
+
+        &.text-has-icon {
+            width: 100%;
+        }
+    }
+}
