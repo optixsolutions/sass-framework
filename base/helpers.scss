@@ -1,3 +1,8 @@
+// General 
+[v-cloak] {
+    display: none;
+}
+
 // Text
 .is-underlined {
     text-decoration: underline !important;
@@ -5,6 +10,21 @@
 
 .has-text-default {
     color: $text !important;
+}
+
+.text-has-icon {
+    align-items: center;
+    display: inline-flex;
+
+    .icon {
+        &:first-child {
+            margin-right: .5em;
+        }
+
+        &:last-child {
+            margin-left: .5em;
+        }
+    }
 }
 
 // Rotated
@@ -24,7 +44,7 @@
     border-radius: 9999px;
 }
 
-// Inline block  alignment
+// Inline block alignment
 .is-middle {
     vertical-align: middle !important;
 }
